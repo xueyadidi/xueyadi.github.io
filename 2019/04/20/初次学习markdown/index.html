@@ -35,6 +35,16 @@ Mandy_xuey...">
   <title>Markdown语法学习 [ ஐ٩(๑´ᵕ`)۶ஐ:* 学习使我进步 ]</title>
   
   
+    <link rel="shortcut icon" href="/peach.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
   
 </head>
 
@@ -59,13 +69,55 @@ Mandy_xuey...">
       <div id="brand">
         
         <a onclick="openUserCard()">
-          <img id="avatar" src>
+          <img id="avatar" src="https://blog-1259074859.cos.ap-beijing.myqcloud.com/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E6%9D%82_19058934556382217.jpg">
           <div id="homelink">ஐ٩(๑´ᵕ`)۶ஐ:* 学习使我进步</div>
         </a>
       </div>
       <div id="menu-list">
         <ul>
         
+        
+          
+            <li>
+          
+            <a href="/index.html">Home</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/archives">Archives</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/tags">Tags</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/categories">Categories</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/about">About</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="https://github.com/xueyadidi">Github</a>
+            
+          </li>
         
         </ul>
       </div>
@@ -260,36 +312,117 @@ Mandy_xuey...">
 
 <div id="user-card">
   <div class="center-field">
-    <img class="avatar" src>
+    <img class="avatar" src="https://blog-1259074859.cos.ap-beijing.myqcloud.com/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E6%9D%82_19058934556382217.jpg">
     <p id="description">薛雅迪迪的个人学习技术生活记录٩(๑>₃<)۶< p>
     <ul class="social-icon">
   
+  
+    <li>
+      <a href="https://github.com/xueyadidi">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://weibo.com/5763058576">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.csdn.net/mandy_xueyadi">
+        
+          知乎
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.csdn.net/mandy_xueyadi">
+        
+          <i class="icon iconfont rss">&#xe60e;</i>
+        
+      </a>
+    </li>
   
 </ul>
   </)۶<></p></div>
 </div>
 
 
+<div id="btn-view">Hide</div>
+
 <script>
 // is trigger analytics / tongji script
 var isIgnoreHost = false;
 
 if(window && window.location && window.location.host) {
-  isIgnoreHost = "".some(function(address){
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
     return 0 === window.location.host.indexOf(address);
   });
 }
 
-var isTriggerAnalytics = !( "" && isIgnoreHost );
+var isTriggerAnalytics = !( true && isIgnoreHost );
 
 </script>
 
 
 
 
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
 <script>
 
-var vegasConfig = "";
+  // fancybox
+  var backgroundImages = [];
+  
+    
+      backgroundImages.push('https://blog-1259074859.cos.ap-beijing.myqcloud.com/A_Darker_Side_of_Orion-Universe_Desktop_Wallpaper_1366x768.jpg');
+    
+      backgroundImages.push('https://blog-1259074859.cos.ap-beijing.myqcloud.com/Nighttime_Lights_in_a_US_Megalopolis-Universe_Desktop_Wallpaper_1366x768.jpg');
+    
+      backgroundImages.push('https://blog-1259074859.cos.ap-beijing.myqcloud.com/nebula_galaxy_light_stars_funnel-Space_Photography_HD_Wallpaper_1366x768.jpg');
+    
+      backgroundImages.push('https://blog-1259074859.cos.ap-beijing.myqcloud.com/universe_photography_wallpaper_1920x1080.jpg');
+    
+      backgroundImages.push('https://blog-1259074859.cos.ap-beijing.myqcloud.com/github.jpg');
+    
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["zoomIn"],"timer":true,"delay":5000,"shuffle":true,"count":5};
 var unsplashConfig = "";
 // is show background images
 var turnoffBackgroundImage = false;
@@ -297,7 +430,7 @@ var turnoffBackgroundImage = false;
 
 
 
-var backgroundColor = "";
+var backgroundColor = "34495E";
 
 $(".fancybox-thumb").fancybox({
   prevEffect: 'none',
