@@ -1085,7 +1085,7 @@ pre .javascript .function {
   }
 }
 .header {
-  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E6%9D%82_19058934556382217.jpg");
+  background: transparent;
 }
 .header-inner {
   position: relative;
@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c9bbf4;
+  background: #bbff42;
 }
 .feed-link,
 .chat {
@@ -2478,7 +2478,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/timg.jpg");
+  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/Anniversary_Red_Rose_Bouquet_Decoration_1366x768.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -2488,17 +2488,14 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.3);
+  -webkit-box-shadow: 0 0 5px #cacbcb;
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.7);
 }
-.header {
-  background: rgba(0,255,255,0.5) none repeat scroll !important;
-}
 .footer {
-  background: rgba(173,216,230,0.3) none repeat scroll !important;
+  background: rgba(202,203,203,0.3) none repeat scroll !important;
 }
 #sidebar {
-  background: rgba(248,248,255,0.3);
+  background: rgba(202,203,203,0.7);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2512,6 +2509,6 @@ body {
   margin-top: 60px;
   padding: 60px 60px 60px 60px;
   background: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
   min-height: 500px;
 }
