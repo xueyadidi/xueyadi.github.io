@@ -1085,7 +1085,7 @@ pre .javascript .function {
   }
 }
 .header {
-  background: transparent;
+  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E6%9D%82_19058934556382217.jpg");
 }
 .header-inner {
   position: relative;
@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #12c800;
+  background: #fa0f6a;
 }
 .feed-link,
 .chat {
