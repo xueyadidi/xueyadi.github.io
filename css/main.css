@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1a4dff;
+  background: #49ff98;
 }
 .feed-link,
 .chat {
@@ -2478,7 +2478,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/81d662b5a5de0592610d80fe8ed7aa00.jpeg");
+  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/timg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
