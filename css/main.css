@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a79963;
+  background: #8affbd;
 }
 .feed-link,
 .chat {
@@ -2477,6 +2477,13 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
+body {
+  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/81d662b5a5de0592610d80fe8ed7aa00.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 .post {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -2484,14 +2491,11 @@ embed {
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
-.header {
-  background: rgba(140,0,211,0.8) none repeat scroll !important;
-}
 .footer {
-  background: rgba(140,0,211,0.8) none repeat scroll !important;
+  background: rgba(173,216,230,0.3) none repeat scroll !important;
 }
 #sidebar {
-  background: rgba(140,0,211,0.8);
+  background: rgba(140,0,211,0.5);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
