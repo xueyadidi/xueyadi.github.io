@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5d360a;
+  background: #ff7f2d;
 }
 .feed-link,
 .chat {
@@ -2488,8 +2488,8 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.7);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.7);
 }
 .header {
   background: rgba(0,255,255,0.5) none repeat scroll !important;
@@ -2498,7 +2498,7 @@ body {
   background: rgba(173,216,230,0.3) none repeat scroll !important;
 }
 #sidebar {
-  background: rgba(0,255,255,0.5);
+  background: rgba(0,255,255,0.1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
