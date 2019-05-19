@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="薛雅迪迪的个人学习技术生活栈٩(๑&amp;gt;₃">
-<meta name="keywords" content="xueyadi">
-<meta property="og:type" content="website">
-<meta property="og:title" content="薛雅迪迪">
-<meta property="og:url" content="http://xueyadidi.com/tags/机器视觉/index.html">
+  <meta name="description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~">
+<meta name="keywords" content="图像处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Matlab进行相机标定">
+<meta property="og:url" content="http://xueyadidi.com/2019/05/18/calibration/index.html">
 <meta property="og:site_name" content="薛雅迪迪">
-<meta property="og:description" content="薛雅迪迪的个人学习技术生活栈٩(๑&amp;gt;₃">
+<meta property="og:description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-19T07:27:38.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="薛雅迪迪">
-<meta name="twitter:description" content="薛雅迪迪的个人学习技术生活栈٩(๑&amp;gt;₃">
+<meta name="twitter:title" content="使用Matlab进行相机标定">
+<meta name="twitter:description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~">
 
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://xueyadidi.com/tags/机器视觉/">
+  <link rel="canonical" href="http://xueyadidi.com/2019/05/18/calibration/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title>标签: 机器视觉 | 薛雅迪迪</title>
+  <title>使用Matlab进行相机标定 | 薛雅迪迪</title>
   
 
 
@@ -172,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/xueyadidi"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,7 +249,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -304,28 +305,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -350,57 +329,232 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>机器视觉<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xueyadidi.com/2019/05/18/calibration/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xueyadidi">
+      <meta itemprop="description" content="薛雅迪迪的个人学习技术生活栈٩(๑>₃<)۶">
+      <meta itemprop="image" content="https://blog-1259074859.cos.ap-beijing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20180131193426.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="薛雅迪迪">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/05/06/paper5-6/" itemprop="url">
-            
-              <span itemprop="name">论文笔记</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">使用Matlab进行相机标定
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-06T10:14:00+08:00" content="2019-05-06">
-          05-06
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-18 16:21:38" itemprop="dateCreated datePublished" datetime="2019-05-18T16:21:38+08:00">2019-05-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-19 15:27:38" itemprop="dateModified" datetime="2019-05-19T15:27:38+08:00">2019-05-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器视觉/" itemprop="url" rel="index"><span itemprop="name">机器视觉</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/18/calibration/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/18/calibration/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note default">
+            <p>好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。</p><p>PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~</p>
+          </div>
+<a id="more"></a>
+<hr>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/图像处理/" rel="tag"># 图像处理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/14/page1/" rel="next" title="life is boring~">
+                <i class="fa fa-chevron-left"></i> life is boring~
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -718,6 +872,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -763,6 +921,8 @@
 
 
 
+
+  
 
 
   
