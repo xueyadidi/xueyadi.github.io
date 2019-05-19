@@ -96,18 +96,25 @@
 
 
 
-  <meta name="description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~">
+  <meta name="description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。据说使用OpenCV中的cvCalibrateCamera2 进行相机标定的精度差，标定结果不稳定，所以选择matlab的Calibration Toolbox。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种">
 <meta name="keywords" content="图像处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Matlab进行相机标定">
 <meta property="og:url" content="http://xueyadidi.com/2019/05/18/calibration/index.html">
 <meta property="og:site_name" content="薛雅迪迪">
-<meta property="og:description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~">
+<meta property="og:description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。据说使用OpenCV中的cvCalibrateCamera2 进行相机标定的精度差，标定结果不稳定，所以选择matlab的Calibration Toolbox。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-19T07:27:38.834Z">
+<meta property="og:image" content="http://xueyadidi.com/img/26.jpg">
+<meta property="og:image" content="http://xueyadidi.com/img/27.jpg">
+<meta property="og:image" content="http://xueyadidi.com/img/29.jpg">
+<meta property="og:image" content="http://xueyadidi.com/img/30.jpg">
+<meta property="og:image" content="http://xueyadidi.com/img/31.jpg">
+<meta property="og:image" content="http://xueyadidi.com/img/28.jpg">
+<meta property="og:updated_time" content="2019-05-19T12:24:54.260Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Matlab进行相机标定">
-<meta name="twitter:description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~">
+<meta name="twitter:description" content="好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。据说使用OpenCV中的cvCalibrateCamera2 进行相机标定的精度差，标定结果不稳定，所以选择matlab的Calibration Toolbox。PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种">
+<meta name="twitter:image" content="http://xueyadidi.com/img/26.jpg">
 
 
 
@@ -405,7 +412,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-19 15:27:38" itemprop="dateModified" datetime="2019-05-19T15:27:38+08:00">2019-05-19</time>
+                <time title="修改时间：2019-05-19 20:24:54" itemprop="dateModified" datetime="2019-05-19T20:24:54+08:00">2019-05-19</time>
               
             
           </span>
@@ -478,7 +485,7 @@
 
       
         <div class="note default">
-            <p>好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。</p><p>PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~</p>
+            <p>好久不用MATLAB了，上一次使用MATLAB还是做数学建模的时候，大概一年时间了吧，这次重新拾起来，是为了做相机标定。据说使用OpenCV中的cvCalibrateCamera2 进行相机标定的精度差，标定结果不稳定，所以选择matlab的Calibration Toolbox。</p><p>PS：今日感慨，typora太太太好用了！！简介的界面，完整的功能~麻雀虽小，五脏俱全的那种厉害~</p><p><img src="\img\26.jpg" alt="alt"></p><p>下面是calibration toolbox的官方示例文档<a href="http://www.vision.caltech.edu/bouguetj/calib_doc/htmls/example.html" title="first calibration example" target="_blank" rel="noopener">calibration toolbox</a>，其提供了20张左右的示例图片。</p><p>需要做如下几件事情：</p><h3 id="新版工具箱的标定"><a href="#新版工具箱的标定" class="headerlink" title="新版工具箱的标定"></a>新版工具箱的标定</h3><ul><li><p>Download the calibration images all at once calib_example.zip (4461Kb zipped) or one by one, and store the 20 images into a seperate folder named calib_example.<strong>一次性下载所有校准图像calib_example.zip(压缩后为4461Kb)或一个一个地下载，并将20个图像存储到一个名为calib_example的单独文件夹中。</strong></p><p><img src="\img\27.jpg" alt="alt"></p></li><li><p>我的matlab是2016a，打开应用程序中的camera calibrator，点击Add Images，将我们下载的20张示例图像添加上。新版的工具箱是自动完成标定的。</p><h4 id="标定结果"><a href="#标定结果" class="headerlink" title="标定结果"></a>标定结果</h4><p>图像上角点的标定</p><p><img src="\img\29.jpg" alt="alt"></p><p>中心误差</p><p><img src="\img\30.jpg" alt="alt"></p><p>摄像机坐标系显示</p><p><img src="\img\31.jpg" alt="alt"></p><h4 id="老版工具箱的标定"><a href="#老版工具箱的标定" class="headerlink" title="老版工具箱的标定"></a>老版工具箱的标定</h4><p>由于很多论文呢都是使用老版工具箱进行标定，所以我们使用老版工具箱进行标定。</p><p>1、下载<a href="http://www.vision.caltech.edu/bouguetj/calib_doc/download/index.html" title="toolbox calib" target="_blank" rel="noopener">老版工具箱</a></p><p><img src="\img\28.jpg" alt="alt"></p><p>2、</p></li></ul>
           </div>
 <a id="more"></a>
 <hr>
@@ -528,6 +535,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/05/19/coverfit/" rel="prev" title="如何画好底妆">
+                如何画好底妆 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -574,8 +585,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -592,7 +612,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -621,7 +641,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -654,7 +676,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -718,6 +742,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#新版工具箱的标定"><span class="nav-number">1.</span> <span class="nav-text">新版工具箱的标定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标定结果"><span class="nav-number">1.1.</span> <span class="nav-text">标定结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#老版工具箱的标定"><span class="nav-number">1.2.</span> <span class="nav-text">老版工具箱的标定</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
