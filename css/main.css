@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f6d42e;
+  background: #2146e9;
 }
 .feed-link,
 .chat {
@@ -2478,7 +2478,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/Anniversary_Red_Rose_Bouquet_Decoration_1366x768.jpg");
+  background: url("https://blog-1259074859.cos.ap-beijing.myqcloud.com/bg20200102.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
